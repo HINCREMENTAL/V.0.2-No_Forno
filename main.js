@@ -547,6 +547,7 @@ window.setInterval(function(){
 	document.getElementById('bol5').innerHTML = bol5;
 	document.getElementById('bol6').innerHTML = bol6;
 	document.getElementById('bol7').innerHTML = bol7;
+	document.getElementById('bol').innerHTML = bol;
 	
 	document.getElementById('prod1v').innerHTML = prod1v;
 	
