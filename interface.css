@@ -2,6 +2,18 @@ body{
 	background-color: #ffffff;
 }
 
+.error {
+  padding:10px 10px 10px 10px;
+  margin:5px;
+  border-radius:5px;
+  text-align:center;
+  font-family: "Lucida Console";
+  font-size: 14;
+  color: #dd1515;
+  
+  
+}
+
 .bg {
   padding:50px 50px 50px 50px;
   margin:30px;

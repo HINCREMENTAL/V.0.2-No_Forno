@@ -10,7 +10,7 @@
 	var prod7 = 0;
 	var prodclick = 0;
 	var prodtime;
-	var cooldown = 1000;
+	var cooldown = 100;
 	
 	var prodname1 = "Palavras";
 	var prodname2 = "Paginas";
@@ -65,15 +65,11 @@
 			if (prod1 >= costProd2){
 				prodtime = setInterval(function(){
 				
-					prod1 = prod1 - costProd2;
-					prod2 = prod2 + 1;
-										
-					document.getElementById('prod1').innerHTML = prod1;
-					document.getElementById('prod2').innerHTML = prod2;
-					document.getElementById('prodclick').innerHTML = prodclick;
-				
+									
 					if (prod1 < costProd2) {
 					clearInterval(prodtime);
+					prod1 = prod1 + costProd2;
+					prod2 = prod2 - 1;
 					var error1 = prodname1 + errms + prodname2;
 					document.getElementById('error1').innerHTML = error1;
 					
@@ -82,7 +78,14 @@
 					document.getElementById('error1').innerHTML = error1;
 					}, 3000);
 					
-					}		
+					}
+
+					prod1 = prod1 - costProd2;
+					prod2 = prod2 + 1;
+										
+					document.getElementById('prod1').innerHTML = prod1;
+					document.getElementById('prod2').innerHTML = prod2;
+					document.getElementById('prodclick').innerHTML = prodclick;
 			
 				}, cooldown);
 				
@@ -107,15 +110,13 @@
 			
 			if (prod2 >= costProd3){
 				prodtime = setInterval(function(){
-					prod3 = prod3 + 1;
-					prod2 = prod2 - costProd3;
 					
-				document.getElementById('prod2').innerHTML = prod2;
-				document.getElementById('prod3').innerHTML = prod3;
-				document.getElementById('prodclick').innerHTML = prodclick;
+					
 				
 				if (prod2 < costProd3) {
 					clearInterval(prodtime);
+					prod3 = prod3 - 1;
+					prod2 = prod2 + costProd3;
 					var error1 = prodname2 + errms + prodname3
 					document.getElementById('error1').innerHTML = error1;
 					
@@ -125,6 +126,13 @@
 					}, 3000);
 					
 					}
+					
+					prod3 = prod3 + 1;
+					prod2 = prod2 - costProd3;
+					
+				document.getElementById('prod2').innerHTML = prod2;
+				document.getElementById('prod3').innerHTML = prod3;
+				document.getElementById('prodclick').innerHTML = prodclick;
 				
 				}, cooldown);
 				
@@ -149,15 +157,11 @@
 			
 			if (prod3 >= costProd4){
 				prodtime = setInterval(function(){
-					prod4 = prod4 + 1;
-					prod3 = prod3 - costProd4;
-					
-				document.getElementById('prod3').innerHTML = prod3;
-				document.getElementById('prod4').innerHTML = prod4;
-				document.getElementById('prodclick').innerHTML = prodclick;
-				
+									
 				if (prod3 < costProd4) {
 					clearInterval(prodtime);
+					prod4 = prod4 - 1;
+					prod3 = prod3 + costProd4;
 					var error1 = prodname3 + errms + prodname4
 					document.getElementById('error1').innerHTML = error1;
 					
@@ -167,6 +171,13 @@
 					}, 3000);
 					
 					}
+					
+					prod4 = prod4 + 1;
+					prod3 = prod3 - costProd4;
+					
+				document.getElementById('prod3').innerHTML = prod3;
+				document.getElementById('prod4').innerHTML = prod4;
+				document.getElementById('prodclick').innerHTML = prodclick;
 				
 				}, cooldown);
 				
@@ -191,15 +202,11 @@
 			
 			if (prod4 >= costProd5){
 				prodtime = setInterval(function(){
-					prod5 = prod5 + 1;
-					prod4 = prod4 - costProd5;
-					
-				document.getElementById('prod4').innerHTML = prod4;
-				document.getElementById('prod5').innerHTML = prod5;
-				document.getElementById('prodclick').innerHTML = prodclick;
-				
+									
 				if (prod4 < costProd5) {
 					clearInterval(prodtime);
+					prod5 = prod5 - 1;
+					prod4 = prod4 + costProd5;
 					var error1 = prodname4 + errms + prodname5
 					document.getElementById('error1').innerHTML = error1;
 					
@@ -209,6 +216,13 @@
 					}, 3000);
 					
 					}
+					
+					prod5 = prod5 + 1;
+					prod4 = prod4 - costProd5;
+					
+				document.getElementById('prod4').innerHTML = prod4;
+				document.getElementById('prod5').innerHTML = prod5;
+				document.getElementById('prodclick').innerHTML = prodclick;
 				
 				}, cooldown);
 				
@@ -233,15 +247,11 @@
 			
 			if (prod5 >= costProd6){
 				prodtime = setInterval(function(){
-					prod6 = prod6 + 1;
-					prod5 = prod5 - costProd6;
 					
-				document.getElementById('prod5').innerHTML = prod5;
-				document.getElementById('prod6').innerHTML = prod6;
-				document.getElementById('prodclick').innerHTML = prodclick;
-				
 				if (prod5 < costProd6) {
 					clearInterval(prodtime);
+					prod6 = prod6 - 1;
+					prod5 = prod5 + costProd6;
 					var error1 = prodname5 + errms + prodname6
 					document.getElementById('error1').innerHTML = error1;
 					
@@ -251,6 +261,14 @@
 					}, 3000);
 					
 					}
+					
+					prod6 = prod6 + 1;
+					prod5 = prod5 - costProd6;
+					
+				document.getElementById('prod5').innerHTML = prod5;
+				document.getElementById('prod6').innerHTML = prod6;
+				document.getElementById('prodclick').innerHTML = prodclick;
+				
 				
 				}, cooldown);
 				
@@ -275,15 +293,11 @@
 			
 			if (prod6 >= costProd7){
 				prodtime = setInterval(function(){
-					prod7 = prod7 + 1;
-					prod6 = prod6 - costProd7;
-					
-				document.getElementById('prod6').innerHTML = prod6;
-				document.getElementById('prod7').innerHTML = prod7;
-				document.getElementById('prodclick').innerHTML = prodclick;
-				
+									
 				if (prod6 < costProd7) {
 					clearInterval(prodtime);
+					prod7 = prod7 - 1;
+					prod6 = prod6 + costProd7;
 					var error1 = prodname6 + errms + prodname7
 					document.getElementById('error1').innerHTML = error1;
 					
@@ -293,6 +307,13 @@
 					}, 3000);
 					
 					}
+					
+					prod7 = prod7 + 1;
+					prod6 = prod6 - costProd7;
+					
+				document.getElementById('prod6').innerHTML = prod6;
+				document.getElementById('prod7').innerHTML = prod7;
+				document.getElementById('prodclick').innerHTML = prodclick;
 				
 				}, cooldown);
 				
@@ -321,7 +342,10 @@
 			prod1 = prod1 - costBol1;
 		}
 		
+		costBol1 = costBol1 + Math.floor(10*Math.pow(1.1,bol1));
+		
 		document.getElementById('bol1').innerHTML = bol1;
+		document.getElementById('costBol1').innerHTML = costBol1;		
 		
 	}
 
@@ -334,7 +358,10 @@
 			prod1 = prod1 - costBol2;
 		}
 		
+		costBol2 = costBol2 + Math.floor(500*Math.pow(1.1,bol2));
+		
 		document.getElementById('bol2').innerHTML = bol2;	
+		document.getElementById('costBol2').innerHTML = costBol2;			
 	}
 	
 	function buttonBol3() {
@@ -346,7 +373,10 @@
 			prod2 = prod2 - costBol3;
 		}
 		
+		costBol3 = costBol3 + Math.floor(100*Math.pow(1.1,bol3));
+		
 		document.getElementById('bol3').innerHTML = bol3;	
+		document.getElementById('costBol3').innerHTML = costBol3;		
 	}
 
 	function buttonBol4() {
@@ -358,7 +388,10 @@
 			prod3 = prod3 - costBol4;
 		}
 		
+		costBol4 = costBol4 + Math.floor(500*Math.pow(1.1,bol4));
+		
 		document.getElementById('bol4').innerHTML = bol4;	
+		document.getElementById('costBol4').innerHTML = costBol4;			
 	}
 
 		function buttonBol5() {
@@ -370,7 +403,10 @@
 			prod4 = prod4 - costBol4;
 		}
 		
-		document.getElementById('bol5').innerHTML = bol5;	
+		costBol5 = costBol5 + Math.floor(100*Math.pow(1.1,bol5));
+		
+		document.getElementById('bol5').innerHTML = bol5;
+		document.getElementById('costBol5').innerHTML = costBol5;			
 	}
 	
 		function buttonBol6() {
@@ -382,7 +418,10 @@
 			prod4 = prod4 - costBol4;
 		}
 		
-		document.getElementById('bol6').innerHTML = bol6;	
+		costBol6 = costBol6 + Math.floor(10000*Math.pow(1.1,bol6));
+		
+		document.getElementById('bol6').innerHTML = bol6;
+		document.getElementById('costBol6').innerHTML = costBol6;
 	}	
 
 		function buttonBol7() {
@@ -394,7 +433,10 @@
 			prod4 = prod4 - costBol7;
 		}
 		
-		document.getElementById('bol7').innerHTML = bol7;	
+		costBol7 = costBol7 + Math.floor(100000*Math.pow(1.1,bol7));
+		
+		document.getElementById('bol7').innerHTML = bol7;
+		document.getElementById('costBol7').innerHTML = costBol7;		
 	}	
 // Boosters
 
